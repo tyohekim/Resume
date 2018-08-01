@@ -1,0 +1,145 @@
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+
+    %\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{document}
+\vspace*{-40pt}
+
+    
+
+%==== Profile ====%
+\vspace*{-10pt}
+\begin{center}
+	{\Huge \scshape {Mike Hoyt}}\\
+	Milwaukee, WI $\cdot$ hoyt.mich@gmail.com $\cdot$ (608)449-8644\\
+\end{center}
+
+
+%==== Experience ====%
+\header{Work Experience}
+\vspace{1mm}
+
+\textbf{Thomson Reuters} \hfill Brookfield, WI\\
+\textit{Technical Lead} \hfill April 2017 | June 2017\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Led a team of 3 responsible for architecting and implementing the shared libraries and general design of the company\textquotesingle{}s next generation RESTful microservices in .NET Core.
+	\item Reduced the time and experience necessary to develop new microservices by creating a generator to set up user authentication/authorization, structured logging, metrics and internal API connections.
+	\item Oversaw development of all microservices, ensuring proper REST standards and above 90\% code coverage.
+	\item Gave a training presentation to all developers on developing RESTful APIs with .NET Core.
+\end{itemize}
+\vspace{-1mm}
+\textit{Software Engineer} \hfill June 2015 | April 2017\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Collaborated with developers across two teams and twelve Silverlight web applications to develop new front-end and back-end features for trading/managing equities, mutual funds and options. The applications are part of a platform responsible for roughly 1/3 of the trades through the NYSE.
+	\item Created reusable and dynamic performance, load and integration test scripts in JMeter to ensure reliable deployments of our REST and SOAP APIs.
+	\item Implemented unit-test frameworks on all untested C\# applications. Gave training to other developers on how to safely make changes to applications by refactoring legacy code   for testability.
+	\item Redesigned a mobile HTML5 stock trading application to conform to platform-wide whitelabeling standards, while making it responsive across all screen sizes.
+	\item Transformed how internship interviews are conducted by applying coding tests. Co-mentored two software engineering interns, teaching SDLC best practices.
+\end{itemize}
+\vspace{-1mm}
+\textit{Software Engineer Intern} \hfill June 2014 | August 2014\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Developed front-end freatures for a Silverlight stock trading application used by 60,000 financial advisors.
+\end{itemize}
+
+%==== International Experience ====%
+\header{Other Experience}
+\vspace{1mm}
+
+\textbf{International Travel} \hfill June 2017 | June 2018\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Independently traveled through 31 countries in Europe, Asia and Oceania.
+	\item Gained self-confidence and a strong appreciation for diversity.
+\end{itemize}
+
+%==== Education ====%
+\header{Education}
+\textbf{University of Wisconsin - La Crosse}\hfill La Crosse, WI\\
+BS Computer Science | Minor in Mathematics \textit{GPA: 3.6} \hfill September 2011 | June 2015\\
+\vspace{2mm}
+\textbf{Anglo American University}\hfill Prague, Czech Republic\\
+BS Computer Science \textit{GPA: 4.0} \hfill February 2014 | June 2014\\
+\vspace{2mm}
+
+\header{Skills}
+\begin{tabular}{ l l }
+	Programming Languages: & C\#, Java, Python, HTML, CSS, JavaScript (familiar), SQL (familiar)               \\
+	Frameworks/Technologies:            & .NET Core, .NET WebAPI, Silverlight, JMeter, Git, SVN, Jenkins, \\
+	& Windows, Linux, AngularJS (familiar) \\ 
+\end{tabular}
+\vspace{2mm}
+
+
+
+
+
+
+
+\ 
+\end{document}
