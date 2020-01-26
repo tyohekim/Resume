@@ -3,6 +3,7 @@
     \usepackage{amsmath}
     \usepackage{amssymb}
     \usepackage{textcomp}
+    \usepackage{tabularx}
     \usepackage[utf8]{inputenc}
     \usepackage[T1]{fontenc}
     \textheight=10in
@@ -15,6 +16,12 @@
 \def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
 
 % DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+{\renewcommand{\arraystretch}{1.2}
+
+\newcolumntype{P}{>{\raggedright\arraybackslash}X}
+
+\parindent=0cm
 
 \newcommand{\area} [2] {
     \vspace*{-9pt}
@@ -33,38 +40,9 @@
     \vspace*{-6pt} \lineunder
 }
 
-\newcommand{\employer} [3] {
-    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
-}
-
-\newcommand{\contact} [3] {
-    \vspace*{-10pt}
-    \begin{center}
-        {\Huge \scshape {#1}}\\
-        #2 \\ #3
-    \end{center}
-    \vspace*{-8pt}
-}
-
-\newenvironment{achievements}{
-    \begin{list}
-        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
-    \end{list}
-}
-
-\newcommand{\schoolwithcourses} [4] {
-    \textbf{#1} #2 $\bullet$ #3\\
-    #4 \\
-    \vspace*{5pt}
-}
-
-\newcommand{\school} [4] {
-    \textbf{#1} #2 $\bullet$ #3\\
-    #4 \\
-}
 % END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
 
-    \begin{document}
+\begin{document}
 \vspace*{-40pt}
 
 
@@ -86,7 +64,7 @@
 \vspace{-1mm}
 \begin{itemize} \itemsep 1pt
 	\item Developing web apps allowing a client to track their finances. Technologies include React, Node, Postgres, Docker, Kubernetes, all manged by AWS.
-	\item Created a novel snapshot test generator for graphql services, comparing differences in API responses from 80 test users after every service change.
+	\item Created a novel snapshot test generator for GraphQL services, comparing differences in API responses from 80 test users after every service change.
 	\item Introduced redis caching, resulting in up to a 70\% increase in API response time.
 \end{itemize}
 \vspace{-1mm}
@@ -133,11 +111,10 @@ BS Computer Science \textit{GPA: 4.0} \hfill February 2014 | June 2014\\
 \vspace{2mm}
 
 \header{Skills}
-\begin{tabular}{ l l }
-    Programming Languages: & Javascript, C\#, Python, HTML, CSS, Java, SQL              \\
-	Frameworks/Technologies:            & Node.js, React.js, Express/Koa, .NET Core, Postgres, Apollo graphql, \\
-	& Docker, Redis, RabbitMQ, Kubernetes, JMeter, Git \\
-\end{tabular}
+\begin{tabularx}{\textwidth}{@{} p{150pt} P}
+\textbf{Programming Languages:} & Javascript, C\#, Python, HTML, CSS, Java, SQL \\
+\textbf{Frameworks/Technologies:} & Node.js, React.js, Express/Koa, .NET Core, Postgres, GraphQL, Docker, Redis, RabbitMQ, Kubernetes, JMeter, Git \\
+\end{tabularx}
 \vspace{2mm}
 
 \end{document}
